@@ -1,0 +1,26 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.offer{
+    text-align: center;
+    padding-top: 15px;
+    height: 50px;
+    background-color: #1DC7A0;
+
+}
+
+
+.navbar{
+    height: 60px;
+    background: #077E62;
+    background: linear-gradient(90deg,rgba(7, 126, 98, 1) 1%, rgba(29, 199, 160, 1) 44%);
+}
+
+.accueil{
+    height: 100vh;
+    background-color: #112C3F;
+}
