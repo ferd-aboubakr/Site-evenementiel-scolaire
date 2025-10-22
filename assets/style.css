@@ -1,35 +1,36 @@
-   *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Roboto Mono", monospace;
-            font-optical-sizing: auto;
-        }
-
-        :root {
-            --primary: #112c3f;
-            --secondary: #1dc7a0 ;
-            --footer: #474747;
-            --acceuil : #006B52;
-            --accent-gradient : linear-gradient(90deg,rgba(7, 126, 98, 1) 1%, rgba(29, 199, 160, 1) 44%);
-        ;
-        }
-
-
-
-
-/* ------------ Badr ------------*/
- 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-
-
-
-body {
-  overflow-x: hidden;
-  background-color: var(--primary);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
 }
 
+:root {
+    --primary: #112c3f;
+    --secondary: #1dc7a0 ;
+    --footer: #474747;
+    --acceuil : #006B52;
+    --accent-gradient : linear-gradient(90deg,rgba(7, 126, 98, 1) 1%, rgba(29, 199, 160, 1) 44%);
+}
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+.main-container {
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: 150px;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--primary);
+}
+
+/* ---------------------------------
+(Offer)
+|  --------------------------------- */
 .offer{
     display: flex;
     justify-content: center;
@@ -37,15 +38,13 @@ body {
     z-index: 1001;
     overflow: hidden;
     text-align: center;
-    
     height: 50px;
     background-color: #1DC7A0;
-    margin-bottom: 20px;
     border-radius: 0 0 25px 25px;
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
+    left: 0;
 }
 
 #offerTxt{
@@ -59,10 +58,10 @@ body {
 
 @keyframes scroll-left {
     0% {
-      left: 100%;
+        left: 100%;
     }
     100% {
-      left: -100%;
+        left: -100%;
     }
 }
 
@@ -71,19 +70,18 @@ body {
     display: flex;
     height: 40px;
     width: 90%;
-    margin: 20px 60px;
     justify-content: space-between;
     align-items: center;
-    background: #077E62;
     background: linear-gradient(90deg,rgba(7, 126, 98, 1) 1%, rgba(29, 199, 160, 1) 44%);
     border-radius: 50px ;
     padding: 10px 30px;
     box-shadow: 0 0 15px var(--secondary);
-    
     backdrop-filter: blur(45px);
     position: fixed;
-    top: 45px;
-    z-index: 1000;   
+    top: 60px; 
+    z-index: 1000;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #logo{
@@ -96,71 +94,67 @@ body {
     color: var(--primary);
 }
 
-ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 40px;
-    
-}
-
 .navBtn {
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--primary);
-  padding: 5px 9px;
-  border-radius: 25px;
-  transition: 0.3s ease-in-out;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary);
+    padding: 5px 9px;
+    border-radius: 25px;
+    transition: 0.3s ease-in-out;
 }
 
 .navBtn:hover {
-  background-color: #112C3F;
-  color: var(--secondary);
+    background-color: #112C3F;
+    color: var(--secondary);
 }
 
 .navBtn.active {
-  background: var(--primary);
-  color: var(--secondary);
-  font-weight: bold;
+    background: var(--primary);
+    color: var(--secondary);
+    font-weight: bold;
 }
 
-
-
+/* ---------------------------------
+(Accueil)
+|  --------------------------------- */
 .accueil{
-    height: 190vh;
     background-color: #112C3F;
-    
+    padding-bottom: 50px;
 }
 
 .TopAcc{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: row;
-    height: 50vh;
+    align-items: flex-start;
     gap: 50px;
     margin-top: 70px;
+    padding-bottom: 40px;
+    width: 90%;
+    
 }
-
 .TxtSide{
     display: flex;
     gap: 30px;
-    flex-direction: column;   
+    flex-direction: column;
+    flex-basis: 50%;
+    max-width: 50%;
+    text-align: center;
+    margin-left: 50px;
 }
-
 .ImgSide{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    
+    flex-basis: 40%;
 }
 
 #AccTitle{
     display: flex;
     justify-content: center;
-    margin-top: 80px;
-
+    padding-top: 50px;
+    margin-top: 100px;
 }
 
 .MidTitle{
@@ -174,24 +168,23 @@ ul{
     padding-bottom: 5px;
     display: inline-block;
     font-size: 45px;
-    margin-top: 70px;
 }
 
 .paragraphe{
     font-size: 15px;
     color: white;
-    width: 800px;
+    
 }
 
 #AccImg{
     border-radius: 25px;
-    width: auto;
+    width: 400px;
     height: 330px;
+    object-fit: cover;
     box-shadow: 14px 14px 0 var(--acceuil);
     transition: 0.3s ease-in-out;
 }
 #AccImg:hover{
-    
     transform: translate(-5px, -5px);
     box-shadow: 40px 40px 0 var(--secondary);
 }
@@ -224,12 +217,12 @@ ul{
 }
 
 .ButtomAcc{
-    margin-top: 150px;
+    margin-top: 100px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .content1{
@@ -255,9 +248,10 @@ ul{
     background-color: #003327;
     text-decoration: none;
     padding: 7px 10px;
-    border-radius: 25px;  
+    border-radius: 25px;
     color: aliceblue;
     width: 150px;
+    text-align: center;
 }
 
 .Acc2p{
@@ -265,6 +259,9 @@ ul{
     color: rgb(255, 255, 255);
 }
 
+/* ---------------------------------
+(Footer)
+|  --------------------------------- */
 footer{
     height: 80px;
     background-color: var(--footer);
@@ -277,7 +274,17 @@ footer{
 }
 
 
-/* Burger icon default hidden */
+/* ---------------------------------
+(Burger Icon)
+|  --------------------------------- */
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 40px;
+}
+
 #nav-icon1 {
     display: none;
     width: 35px;
@@ -291,16 +298,16 @@ footer{
 
 #nav-icon1 span {
     display: block;
-    height: 4px;
+    height: 6px;
     width: 100%;
     background: var(--acceuil);
-    border: 1px solid black;
-    margin: 5px 0;
+    border: 2px solid rgb(22, 18, 48);
+    margin: 2px;
+    
     border-radius: 2px;
     transition: 0.3s;
 }
 
-/* Transform burger to X when open */
 #nav-icon1.open span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
@@ -311,101 +318,109 @@ footer{
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Responsive */
+/* ---------------------------------
+(Responsive - Max-Width: 768px)
+|  --------------------------------- */
 @media (max-width: 768px) {
 
-  /* Show burger icon */
-  #nav-icon1 {
-    display: block;
-    position: fixed;
-    top: 70px;
-    right: 50px;
-    z-index: 2001;
-  }
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
 
-  /* Hide normal desktop navbar */
-  .navbar ul {
-    display: none;
-  }
+    .main-container {
+        padding-top: 120px;
+        width: 90%;
+    }
+    
+    .navbar{
+        width: 85%;
+        top: 60px;
+    }
 
-  /* Full-screen mobile menu */
-  .nav-links {
-    display: none;              /* hidden by default */
-    flex-direction: column;     /* vertical links */
-    align-items: center;
-    justify-content: center;    /* center vertically */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;              /* full screen height */
-    background: var(--accent-gradient);
-    gap: 40px;
-    z-index: 1500;
-  }
+    #nav-icon1 {
+        display: block;
+        position: fixed;
+        top: 70px;
+        right: 40px;
+        z-index: 2001;
+    }
 
-  /* When active, show menu */
-  .nav-links.active {
-    display: flex;
-  }
+    .navbar ul {
+        display: none;
+    }
 
-  /* Style links */
-  .nav-links a {
-    color: var(--primary);
-    font-size: 22px;
-    font-weight: 700;
-    text-decoration: none;
-    padding: 12px 25px;
-    border-radius: 30px;
-    background-color: rgba(255, 255, 255, 0.2);
-    transition: background-color 0.3s ease;
-  }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--accent-gradient);
+        gap: 40px;
+        z-index: 1500;
+    }
 
-  .nav-links a:hover {
-    background-color: rgba(255, 255, 255, 0.4);
-  }
+    .nav-links.active {
+        display: flex;
+    }
+
+    .TopAcc{
+        gap: 30px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    .TxtSide, .ImgSide {
+        max-width: 100%;
+        flex-basis: 100%;
+    }
+
+    .BigTitle{
+        margin: 30px auto;
+        font-size: 35px;
+    }
+
+    .MidTitle{
+        font-size: 25px;
+    }
+
+    .paragraphe{
+        width: 100%;
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    #AccTitle{
+        padding: 0;
+    }
+
+    #AccImg {
+        width: 100%;
+        height: 250px;
+    }
+
+    .ButtomAcc {
+        margin-top: 50px;
+        gap: 40px;
+    }
+    
+    .content1 {
+        width: 90%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    #PicAcc {
+        width: 100%;
+        height: 200px;
+    }
+
 }
-
-
-
-
-
-
-
-
- 
-
-/* ------------ Badr ------------*/
-
-
-
-
-/* ------------ Youness ------------*/
-
-/* ------------ Youness ------------*/
-
-
-
-
-/* ------------ Ayoub ------------*/
-
-/* ------------ Ayoub ------------*/
-
-
-
-
-/* ------------ Ferd ------------*/
-
-
-/* ------------ Ferd ------------*/
-
-
-
-
-/* ------------ Mustafa ------------*/
-
-
-/* ------------ Mustafa ------------*/
-
-
-
