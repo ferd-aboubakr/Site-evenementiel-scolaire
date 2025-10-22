@@ -141,7 +141,7 @@ body {
     flex-basis: 50%;
     max-width: 50%;
     text-align: center;
-    margin-left: 50px;
+    margin-left: 90px;
 }
 .ImgSide{
     display: flex;
@@ -183,6 +183,7 @@ body {
     object-fit: cover;
     box-shadow: 14px 14px 0 var(--acceuil);
     transition: 0.3s ease-in-out;
+    margin-left: 80px;
 }
 #AccImg:hover{
     transform: translate(-5px, -5px);
@@ -303,7 +304,6 @@ ul{
     background: var(--acceuil);
     border: 2px solid rgb(22, 18, 48);
     margin: 2px;
-    
     border-radius: 2px;
     transition: 0.3s;
 }
@@ -342,8 +342,8 @@ ul{
     #nav-icon1 {
         display: block;
         position: fixed;
-        top: 70px;
-        right: 40px;
+        top: 67px;
+        right: 80px;
         z-index: 2001;
     }
 
@@ -403,8 +403,8 @@ ul{
     }
 
     #AccImg {
-        width: 100%;
-        height: 250px;
+        width: 250px;
+        height: 200px;
     }
 
     .ButtomAcc {
@@ -416,6 +416,11 @@ ul{
         width: 90%;
         max-width: 350px;
         height: auto;
+    }
+
+    #activiteTitle{
+        width: 90%;
+        margin-right: 40px;
     }
 
     #PicAcc {
