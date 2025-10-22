@@ -2,6 +2,8 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: "Roboto Mono", monospace;
+            font-optical-sizing: auto;
         }
 
         :root {
@@ -9,7 +11,7 @@
             --secondary: #1dc7a0 ;
             --footer: #474747;
             --acceuil : #006B52;
-            --linear : linear-gradient(90deg,rgba(7, 126, 98, 1) 1%, rgba(29, 199, 160, 1) 44%);
+            --accent-gradient : linear-gradient(90deg,rgba(7, 126, 98, 1) 1%, rgba(29, 199, 160, 1) 44%);
         ;
         }
 
@@ -17,38 +19,39 @@
 
 
 /* ------------ Badr ------------*/
- *{
-    margin: 0;
-    padding: 0;
-    font-family: "Roboto Mono", monospace;
-    font-optical-sizing: auto;
-    
-
-}
-
+ 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 
 
 body {
   overflow-x: hidden;
+  background-color: var(--primary);
 }
 
 
 .offer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+    overflow: hidden;
     text-align: center;
-    padding-top: 15px;
+    
     height: 50px;
     background-color: #1DC7A0;
     margin-bottom: 20px;
     border-radius: 0 0 25px 25px;
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 #offerTxt{
     position: absolute;
     white-space: nowrap;
-    animation: scroll-left 20s linear infinite;
+    animation: scroll-left 30s linear infinite;
     font-size: 18px;
     font-weight: bold;
     color: #0c301e;
@@ -66,9 +69,9 @@ body {
 
 .navbar{
     display: flex;
-    height: 60px;
+    height: 40px;
     width: 90%;
-    margin: 20px auto;
+    margin: 20px 60px;
     justify-content: space-between;
     align-items: center;
     background: #077E62;
@@ -76,6 +79,11 @@ body {
     border-radius: 50px ;
     padding: 10px 30px;
     box-shadow: 0 0 15px var(--secondary);
+    
+    backdrop-filter: blur(45px);
+    position: fixed;
+    top: 45px;
+    z-index: 1000;   
 }
 
 #logo{
@@ -99,10 +107,10 @@ ul{
 
 .navBtn {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--primary);
-  padding: 7px 12px;
+  padding: 5px 9px;
   border-radius: 25px;
   transition: 0.3s ease-in-out;
 }
@@ -121,25 +129,251 @@ ul{
 
 
 .accueil{
-    height: 100vh;
+    height: 190vh;
     background-color: #112C3F;
+    
 }
 
 .TopAcc{
-    
-    
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
     height: 50vh;
+    gap: 50px;
+    margin-top: 70px;
+}
+
+.TxtSide{
+    display: flex;
+    gap: 30px;
+    flex-direction: column;   
+}
+
+.ImgSide{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+#AccTitle{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
 
 }
 
+.MidTitle{
+    color: var(--secondary);
+    font-size: 30px;
+}
 
 .BigTitle{
     color: var(--secondary);
     border-bottom: 5px solid var(--secondary);
     padding-bottom: 5px;
     display: inline-block;
+    font-size: 45px;
+    margin-top: 70px;
 }
 
+.paragraphe{
+    font-size: 15px;
+    color: white;
+    width: 800px;
+}
+
+#AccImg{
+    border-radius: 25px;
+    width: auto;
+    height: 330px;
+    box-shadow: 14px 14px 0 var(--acceuil);
+    transition: 0.3s ease-in-out;
+}
+#AccImg:hover{
+    
+    transform: translate(-5px, -5px);
+    box-shadow: 40px 40px 0 var(--secondary);
+}
+
+#OrizLine{
+    background-color: var(--secondary);
+    height: 12px;
+    width: 90%;
+    box-shadow: 0 0 35px var(--secondary);
+    margin: 50px auto;
+}
+
+#PicAcc{
+    margin-bottom: 10px ;
+    width: 255px;
+    height: 180px;
+    border-radius: 15px;
+}
+
+#activiteTitle{
+    text-align: center;
+    font-size: 18px;
+    color: #003125;
+    background: var(--accent-gradient);
+    padding: 10px 12px;
+    border-radius: 25px;
+    width: 300px;
+    margin: 20px auto;
+    box-shadow: 0 0 15px var(--secondary);
+}
+
+.ButtomAcc{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+}
+
+.content1{
+    background-color: #00795d;
+    width: 300px;
+    height: 350px;
+    border-radius: 25px;
+    padding: 22px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 0 30px black;
+    transition: all 0.3s;
+}
+
+.content1:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--secondary);
+}
+
+.SavoirBtn{
+    background-color: #003327;
+    text-decoration: none;
+    padding: 7px 10px;
+    border-radius: 25px;  
+    color: aliceblue;
+    width: 150px;
+}
+
+.Acc2p{
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+}
+
+footer{
+    height: 80px;
+    background-color: var(--footer);
+}
+
+#footerP{
+    color: rgb(199, 199, 199);
+    text-align: center;
+    padding-top: 30px;
+}
+
+
+/* Burger icon default hidden */
+#nav-icon1 {
+    display: none;
+    width: 35px;
+    height: 25px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+#nav-icon1 span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: var(--acceuil);
+    border: 1px solid black;
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Transform burger to X when open */
+#nav-icon1.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+#nav-icon1.open span:nth-child(2) {
+    opacity: 0;
+}
+#nav-icon1.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  /* Show burger icon */
+  #nav-icon1 {
+    display: block;
+    position: fixed;
+    top: 70px;
+    right: 50px;
+    z-index: 2001;
+  }
+
+  /* Hide normal desktop navbar */
+  .navbar ul {
+    display: none;
+  }
+
+  /* Full-screen mobile menu */
+  .nav-links {
+    display: none;              /* hidden by default */
+    flex-direction: column;     /* vertical links */
+    align-items: center;
+    justify-content: center;    /* center vertically */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;              /* full screen height */
+    background: var(--accent-gradient);
+    gap: 40px;
+    z-index: 1500;
+  }
+
+  /* When active, show menu */
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Style links */
+  .nav-links a {
+    color: var(--primary);
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+
+
+
+
+
+
+
+ 
 
 /* ------------ Badr ------------*/
 
