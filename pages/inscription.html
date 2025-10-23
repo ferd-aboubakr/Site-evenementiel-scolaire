@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style.css">
+    <title>Inscription</title>
+</head>
+<body>
+    <header>
+
+        <div class="navbar">
+            <h3 id="logo"><a href="index.html" class="navLogo">BAYAM</a></h3 id="activiteTitle">
+
+            <ul class="nav-links">
+                <li><a href="/index.html" class="navBtn">ACCUEIL</a></li>
+                <li><a href="/pages/Programme.html" class="navBtn">PROGRAMME</a></li>
+                <li><a href="/pages/activities.html" class="navBtn">ACTIVITES</a></li>
+                <li><a href="" class="navBtn active">INSCRIPTION</a></li>
+                <li><a href="" class="navBtn ">CONTACT</a></li>
+            </ul>
+        </div>
+
+        <div class="offer">
+            <p id="offerTxt">Journée Portes Ouvertes 2025 Lycée Excellence - Samedi 15 Mars 2025 | 9h00 - 18h00</p>
+        </div>
+
+        <div id="nav-icon1">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </header>
+
+    <section class = "inscription-section"> 
+        <div class = "BigTitle">
+            <h1>INSCRIPTION</h1>
+        </div>
+        <div>
+        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident distinctio natus sequi sed vero
+                 inventore doloremque dignissimos dolore ipsum ea nesciunt nulla delectus minus, neque, officia, 
+                 rem assumenda sit accusantium.
+        </p>
+        </div>
+
+ <div class="input-container">
+
+    <label class="name">nom complet :</label>
+    <br>
+    <input class="input" type="text" id="name" placeholder="Entrez ici...." name="name" required>
+    <br>
+
+    <label class="name" for="email">adresse e-mail :</label>
+    <br>
+    <input class="input" type="email" id="email" placeholder="Entrez ici...." name="email" required>
+    <br>
+
+    <label class="name" for="age">Tele</label>
+    <br>
+    <input class="input" type="number" id="age" placeholder="+212 06 000000" name="age" required>
+    <br>
+
+    <label class="name" for="Activity">Tranche d'age :</label>
+    <br>
+    <input class="input" type="text" id="Activity" placeholder="augementer ou ou decrementer" name="Activity" required>
+    <br>
+    <label class="name" for="Activity">activité souhaitees (maximum 3):</label>
+    <br>
+    <input class="input" type="text" id="Activity" placeholder="Laisser.............." name="Activity" required>
+    <br>
+
+     <button  type="button" onclick="alert('Inscription envoyer. Merci !')"class ="send" > Envoyer </button>
+
+</div>
+    </section>
+
+     <footer>
+        <p id="footerP">© 2025 SITE, All Rights Reserved.</p>
+    </footer>
+
+    <script>
+const burger = document.getElementById('nav-icon1');
+const navLinks = document.querySelector('.nav-links');
+
+burger.addEventListener('click', () => {
+  burger.classList.toggle('open');
+  navLinks.classList.toggle('active'); // toggles display:flex
+});
+
+</script>
+
+</body>
+</html>
