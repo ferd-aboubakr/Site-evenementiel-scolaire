@@ -9,22 +9,29 @@
     <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-        
-    <header>
-        <div class="offer">
-            <p id="offerTxt">Journée Portes Ouvertes 2025 Lycée Excellence - Samedi 15 Mars 2025 | 9h00 - 18h00</p>
-        </div>
-        <div class="navbar">
-            <h3 id="logo"><a href="index.html" class="navLogo">BAYAM</a></h3>
-            <ul>
-                <li><a href="../index.html" class="navBtn">ACCUEIL</a></li>
-                <li><a href="Programme.html" class="navBtn">PROGRAMME</a></li>
-                <li><a href="activities.html" class="navBtn active">ACTIVITES</a></li>
-                <li><a href="inscription.html" class="navBtn">INSCRIPTION</a></li>
-                <li><a href="" class="navBtn">CONTACT</a></li>
-            </ul>
-        </div>
-    </header>
+    <section class="Accueil">
+        <header>
+            <div class="navbar">
+                <h3 id="logo"><a href="index.html" class="navLogo">BAYAM</a></h3 >
+                <ul class="nav-links">
+                    <li><a href="index.html" class="navBtn">ACCUEIL</a></li>
+                    <li><a href="/pages/Programme.html" class="navBtn active">PROGRAMME</a></li>
+                    <li><a href="/pages/activities.html" class="navBtn">ACTIVITES</a></li>
+                    <li><a href="/pages/inscription.html" class="navBtn">INSCRIPTION</a></li>
+                    <li><a href="" class="navBtn">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="offer">
+                <p class="offerTxt">Journée Portes Ouvertes 2025 Lycée Excellence - Samedi 15 Mars 2025 | 9h00 - 18h00   --- Journée Portes Ouvertes 2025 Lycée Excellence - Samedi 15 Mars 2025 | 9h00 - 18h00 </p>
+                <p class="offerTxt">Journée Portes Ouvertes 2025 Lycée Excellence - Samedi 15 Mars 2025 | 9h00 - 18h00   --- Journée Portes Ouvertes 2025 Lycée Excellence - Samedi 15 Mars 2025 | 9h00 - 18h00 </p>
+            </div>
+            <div id="nav-icon1">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+    </section>
         <main id="programme" class="page-programme">
             <div class="filtre">
                 <input type="search" id="gsearch" name="gsearch" placeholder="filtré . . .">
@@ -124,8 +131,15 @@
         <footer>
             <p>© 2025 Lycée Excellence - Tous droits réservés</p>
         </footer>
-    </section>
 
-   
+   <script>
+        const burger = document.getElementById('nav-icon1');
+        const navLinks = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+        burger.classList.toggle('open');
+        navLinks.classList.toggle('active');
+    });
+</script>
 </body>
 </html>
