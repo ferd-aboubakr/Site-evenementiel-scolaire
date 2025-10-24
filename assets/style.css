@@ -221,7 +221,6 @@ ul{
     border: none;
 }
 
-/* Responsive map height */
 @media (max-width: 992px) {
     .map-container iframe {
         height: 350px;
@@ -464,6 +463,73 @@ ul{
   border: 1px solid var(--secondary);
   box-shadow: 0 0 20px rgba(29, 199, 160, 0.6);
   background-color: rgba(29, 199, 160, 0.1);
+}
+@media (max-width: 1024px) and (min-width: 769px) {
+  
+  .navbar {
+    width: 95%;
+    margin: 15px auto;
+    padding: 8px 20px;
+  }
+
+  .navbar ul {
+    gap: 25px;
+  }
+
+  #logo {
+    font-size: 22px;
+  }
+
+  .navBtn {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+
+  .header-content h2 {
+    font-size: 36px;
+  }
+
+  .header-content p {
+    font-size: 16px;
+  }
+
+  .contact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .infos {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 20px;
+  }
+
+  .info-box {
+    padding: 15px;
+  }
+
+  .localisation-section {
+    max-width: 95%;
+  }
+
+  .map-container iframe {
+    height: 400px;
+  }
+
+  .socials {
+    padding: 25px 15px;
+  }
+
+  .icons {
+    gap: 25px;
+  }
 }
 
 /*-----------------Younes-----------------*/
