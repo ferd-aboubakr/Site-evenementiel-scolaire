@@ -481,12 +481,13 @@ ul{
     #AccImg{
         width: 300px;
         height: 300px;
-        margin: 20px;
+        margin-right: 60px;
+        margin-left: 0px;
     }
 
     .MidTitle{
         font-size: 24px;
-        width: 500px;
+        width: 450px;
     }
 
     .paragraphe{
