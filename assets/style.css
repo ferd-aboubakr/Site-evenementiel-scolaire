@@ -26,8 +26,67 @@
 body {
     overflow-x: hidden;
     background-color: var(--primary);
+
+
 }
 
+
+button{
+    background-image: linear-gradient(90deg,rgba(7, 126, 98, 1) 1%, rgba(29, 199, 160, 1) 44%);
+    border-radius: 20px;
+    border: 0;
+    box-shadow: 0 1px 4px rgba(0, 0,0 , 0.3);
+    color: white;
+    cursor: pointer;
+    padding: 10px 25px;
+}
+
+button:active{
+    opacity: 0.8;
+}
+
+.modal{
+    background-color: rgba(0, 0,0 , 0.3);
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.modal.open{
+    opacity: 1;
+    z-index: 999;
+
+}
+
+.modal-inner{
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgb(0, 0,0 , 0.3);
+    padding: 15px 25px;
+    text-align: center;
+    width: 380px;
+
+}
+
+.modal-inner h2{
+    margin: 0;
+
+}
+
+.modal-inner p{
+    line-height: 24px;
+    margin: 10px 0;
+}
 /* ---------------------------------
 (Offer)
 |  --------------------------------- */
@@ -77,6 +136,54 @@ body {
         scale: 1;
     }
 
+}
+
+
+
+@keyframes fade-down {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1); 
+    }
+}
+
+@keyframes fade-left{
+    0% {
+        opacity: 0;
+        transform: translateX(30px) scale(0.9);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0px) scale(1); 
+    }
+}
+@keyframes fade-right{
+    0% {
+        opacity: 0;
+        transform: translateX(30px) scale(0.9);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0px) scale(1); 
+    }
+}
+
+.BigTitle{
+    animation: fade-down 0.5s;
+}
+
+.ImgSide{
+    animation: fade-left 1s;
+}
+.TxtSide{
+    animation: fade-right 1s;
 }
 
 .activiteTitle{
@@ -250,7 +357,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    gap: 30px;
+    gap: 0px;
     flex-wrap: wrap;
 }
 

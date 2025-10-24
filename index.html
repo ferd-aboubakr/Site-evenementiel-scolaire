@@ -4,13 +4,24 @@
     <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="WEBSITE SCHOOL">
+        <meta name="description" content="Découvrez le Lycée Excellence : un établissement innovant offrant des programmes éducatifs de qualité et des activités enrichissantes.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/team-repo/assets/style.css">
+        <link rel="stylesheet" href="/assets/style.css">
         <title>SCHOOL WEBSITE</title>
     </head>
     <body>
     
+        <button id="openModal">Open Modal</button>
+
+    <div class="modal" id="modal">
+        <div class="modal-inner">
+            <h2>Information importante :</h2>
+            <p>
+               L'inscription est obligatoire pour participer aux ateliers. Les places sont limitées, inscrivez-vous dès maintenant !
+            </p>
+            <button id="closeModal">Close</button>
+        </div>
+    </div>
 
     <section class="accueil">
 
@@ -50,7 +61,7 @@
                          accompagner dans votre exploration.</p>
                 </div>    
                 <div class="ImgSide">
-                    <img src="/team-repo/images/acceuil_imgs/download.avif" alt="" id="AccImg">
+                    <img src="/images/acceuil_imgs/download.avif" alt="" id="AccImg">
                 </div>
             </div>
             <div id="OrizLine"></div>
@@ -58,15 +69,15 @@
                 <div class="box1">
                     <h3 class="activiteTitle">Ateliers Scientifiques</h3>
                     <div class="content1">
-                        <img src="/team-repo/images/acceuil_imgs/sience.avif" alt="" class="PicAcc">
+                        <img src="/images/acceuil_imgs/sience.avif" alt="" class="PicAcc">
                         <p class="Acc2p">Découvrez nos laboratoires équipés et participez à des expériences fascinantes en physique, chimie et biologie.</p>
                         <a href="" class="SavoirBtn">En Savoir Plus</a>
                     </div>
                 </div>
                 <div class="box2">
-                    <h3 class="activiteTitle">Ateliers Scientifiques</h3>
+                    <h3 class="activiteTitle">Arts et Culture</h3>
                     <div class="content1">
-                        <img src="/team-repo/images/acceuil_imgs/filo.avif" alt="" class="PicAcc">
+                        <img src="/images/acceuil_imgs/filo.avif" alt="" class="PicAcc">
                         <p class="Acc2p">Explorez notre espace artistique et découvrez les créations de nos élèves en peinture, sculpture et arts numériques.</p>
                         <a href="" class="SavoirBtn">En Savoir Plus</a>
                     </div>
@@ -74,7 +85,7 @@
                 <div class="box3">
                     <h3 class="activiteTitle">Installations Sportives</h3>
                     <div class="content1">
-                        <img src="/team-repo/images/acceuil_imgs/sport.avif" alt="" class="PicAcc">
+                        <img src="/images/acceuil_imgs/sport.avif" alt="" class="PicAcc">
                         <p class="Acc2p">Testez notre complexe sportif avec gymnase, terrains extérieurs et mur d'escalade. Tournois organisés toute la journée.</p>
                         <a href="" class="SavoirBtn">En Savoir Plus</a>
                     </div>
@@ -92,15 +103,29 @@
 
 
    <script>
+        const openBtn = document.getElementById("openModal");
+        const closeBtn = document.getElementById("closeModal");
+        const modal = document.getElementById("modal");
+        
         window.onload = function() {
-        alert("Information importante : L'inscription est obligatoire pour participer aux ateliers. Les places sont limitées, inscrivez-vous dès maintenant !");
+            modal.classList.add("open");
         };
+        
+        openBtn.addEventListener("click", () => {
+            modal.classList.add("open");
+        });
+        
+        closeBtn.addEventListener("click", () => {
+            modal.classList.remove("open");
+        });
+        
         const burger = document.getElementById('nav-icon1');
         const navLinks = document.querySelector('.nav-links');
         burger.addEventListener('click', () => {
           burger.classList.toggle('open');
           navLinks.classList.toggle('active');
         });
+
     </script>
 
 
