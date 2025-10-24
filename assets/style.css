@@ -511,6 +511,9 @@ footer{
     color: #0c301e;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
+    .top-line, .branch-lines {
+        display: none;
+    }
     .buttons_activity {
         flex-direction: row;
         justify-content: center;
