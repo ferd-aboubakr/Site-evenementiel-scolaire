@@ -192,12 +192,12 @@ ul{
 
 .localisation-section {
     width: 100%;
-    max-width: 1270px; /* باش تبقى محدودة فالـlarge screens */
+    max-width: 1270px; 
     margin: 40px auto;
     border-radius: 15px;
     overflow: hidden;
     font-family: Arial, sans-serif;
-    padding: 0 15px; /* باش يكون شوية space فالموبايل */
+    padding: 0 15px; 
 }
 
 .map-container {
@@ -231,12 +231,15 @@ ul{
 @media (max-width: 600px) {
     .map-container iframe {
         height: 250px;
+        border-radius: 20px;
     }
 }
 
 .localisation-header {
     background-color: #00c2a8; 
     padding: 15px 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .localisation-header h2 {
@@ -429,4 +432,38 @@ ul{
     background-color: var(--primary);
   }
 }
+/* Hover effect for contact cards */
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  text-align: center;
+  transition: all 0.3s ease; 
+  border: 1px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03); 
+  border: 1px solid var(--secondary);     
+  box-shadow: 0 0 20px rgba(29, 199, 160, 0.6);
+  background-color: rgba(29, 199, 160, 0.1);
+}
+.info-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.info-box:hover {
+  transform: translateY(-8px) scale(1.03);
+  border: 1px solid var(--secondary);
+  box-shadow: 0 0 20px rgba(29, 199, 160, 0.6);
+  background-color: rgba(29, 199, 160, 0.1);
+}
+
 /*-----------------Younes-----------------*/
