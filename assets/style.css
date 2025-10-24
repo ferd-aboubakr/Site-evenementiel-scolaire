@@ -373,7 +373,7 @@ ul{
     border-radius: 20px;
     padding-top: 15px;
     padding-bottom: 35px;
-    padding: 30px;
+    padding: 20px;
     width: 100%;
     height: 100%;
     display: flex;
@@ -509,6 +509,30 @@ footer{
     font-size: 18px;
     font-weight: bold;
     color: #0c301e;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    .buttons_activity {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+        width: 100%;
+    }
+    .sci_activities, .art_activities, .sport_activities {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem 1%;
+    }
+    .activities-container {
+        width: 48%;
+        min-height: 350px;
+    }
+    .galerie {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .science-text h2, .arts_cult h2, .sports_bien h2 {
+        font-size: 28px;
+    }
 }
 @media (max-width: 768px) {
     html, .body {
